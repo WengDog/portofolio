@@ -1,0 +1,174 @@
+@import "_variable.scss";
+
+.about {
+    background-color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: $superBigFont;
+        color: $neutralColor;
+        margin: 40px;
+
+        @include mobile{
+            font-size: 20px;
+            margin: 20px;
+        }
+    }
+
+    .card {
+        background-color: $neutralColor;
+        display: flex;
+        flex-direction: row;
+        width: 70vw;
+        height: 65%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px -8px black;
+
+        @include mobile {
+            width: 90vw;
+            height: 70vh;
+            margin: 10px 0;
+            flex-direction: column;
+        }
+
+        .left {
+            flex: 0.3;
+            background-image: url("../../assets/hmif.jpg");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .right {
+            flex: 0.7;
+
+            .wrapper {
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                .description {
+                    flex: 0.7;
+                    height: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .intro {
+                        color: $secondaryColor;
+                        font-size: $mediumFont;
+                        font-weight: 500;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+
+                        p {
+                            span {
+                                color: $primaryColor;
+                                font-weight: 900;
+                            }
+
+                        }
+                    }
+
+                    .pointdesc-container {
+
+                        h2 {
+                            padding-top: 10px;
+                            font-weight: 900;
+                            font-size: $bigFont;
+                            color: $primaryColor;
+                            text-decoration: overline $primaryLigthColor;
+                            margin-bottom: 30px;
+                            text-align: right;
+
+                            @include mobile {
+                                text-align: center;
+                                font-size: $mediumFont;
+                            }
+
+                        }
+
+                        .point-wrapper {
+                            margin-bottom: 20px;
+
+                            h3 {
+                                font-size: $mediumFont;
+                                font-weight: 700;
+                                margin-bottom: 10px;
+
+                                @include mobile {
+                                    font-size: $smallFont;
+                                }
+
+                                &::before {
+                                    content:"• ";
+                                }
+                            }
+
+                            p {
+                                font-weight: 500;
+                                color: $secondaryColor;
+
+                                @include mobile {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+                .sticky-menu {
+                    flex: 0.3;
+                    height: 90%;
+                    position: absolute;
+                    top: 10%;
+                    right: 0;
+                    ul {
+                        li {
+                            margin-bottom: 20px;
+
+                            .icon {
+                                padding-right: 10px;
+                                font-size: 40px;
+                                width: 80px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all 1s ease;
+
+                                @include mobile {
+                                    font-size: 20px;
+                                    width: 40px;
+                                    height: 30px;
+                                }
+
+                                &.active {
+                                    background-color: $primaryColor;
+                                    color: $neutralColor;
+                                    width: 70px;
+                                    float: right;
+                                    border-radius: 50px 0 0 50px; // top-left top-right bottom-right bottom-left
+
+                                    @include mobile {
+                                        width: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

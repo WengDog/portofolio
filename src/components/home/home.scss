@@ -1,0 +1,117 @@
+@import "_variable.scss";
+
+.home {
+    background-color: $secondaryLigthColor;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left {
+        flex: 0.5;
+        position: relative;
+
+        @include mobile{
+            flex: 0.4;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 100px;
+
+            @include mobile {
+                padding-left: 0;
+                align-items: center;
+            }
+
+            h1 {
+                color: $primaryColor;
+                font-size: 60px;
+                font-weight: 700px;
+                overflow: inherit;
+
+                @include mobile {
+                    font-size: 40px;
+                }
+            }
+
+            h2 {
+                font-size: 40px;
+                color: $neutralColor;
+                overflow: inherit;
+
+                @include mobile {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+        flex-direction: row;
+        overflow: hidden;
+
+        @include mobile {
+            flex: 0.6;
+            padding-top: 20px;
+        }
+
+        .zoomWrapper {
+            height: 500px;
+            width: 500px;
+            border-width: 5px;
+            border-color: $primaryColor;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-style: solid;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mobile {
+                height: 400px;
+                width: 400px;
+            }
+
+            .imgContainer {
+                background-color: $neutralColor;
+                overflow: hidden;
+                height: 400px;
+                width: 400px;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                transition: all 1s ease;
+
+                @include mobile {
+                    height: 300px;
+                    width: 300px;
+                }
+
+                .img {
+                    height: 100%;
+
+                    @include mobile {
+                        height: 80%;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+
+                }
+
+            }
+        }
+    }
+}

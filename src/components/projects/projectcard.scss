@@ -1,0 +1,77 @@
+@import "_variable.scss";
+
+.projectcard {
+    background-color: $neutralColor;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -8px black;
+    justify-content: space-around;
+    padding: 20px;
+
+    @include mobile {
+        width: 60vw;
+        height: 180px;
+        margin: 10px 0;
+        flex-direction: row;
+    }
+
+    &.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .icon-section {
+        flex: 0.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $primaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .description-section {
+        flex: 0.7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+
+        h2 {
+            font-size: $bigFont;
+            margin-bottom: 20px;
+            color: $primaryColor;
+
+            @include mobile {
+                font-size: $smallFont;
+                margin-bottom: 5px;
+            }
+        }
+
+        p {
+            font-size: $smallFont;
+
+            @include mobile {
+                font-size: $superSmallFont;
+            }
+        }
+
+        @include mobile {
+            padding: 0;
+        }
+    }
+}

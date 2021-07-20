@@ -1,0 +1,26 @@
+// $primaryColor: #2B2D42;
+// $primaryLigthColor: #8D99AE;
+// $neutralColor: #EDF2F4;
+// $secondaryColor: #D90429;
+// $secondaryLigthColor: #EF233C;
+// $orangeColor: rgb(228, 134, 46);
+
+$primaryColor: #0D1B2A;
+$primaryLigthColor: #1B263B;
+$neutralColor: #E0E1DD;
+$secondaryColor: #415A77;
+$secondaryLigthColor: #778DA9;
+
+$superBigFont: 50px;
+$bigFont: 28px;
+$mediumFont: 20px;
+$smallFont: 15px;
+$superSmallFont: 10px;
+
+$mobileWidth: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$mobileWidth}){
+        @content
+    }
+}
