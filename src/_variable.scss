@@ -17,10 +17,25 @@ $mediumFont: 20px;
 $smallFont: 15px;
 $superSmallFont: 10px;
 
-$mobileWidth: 768px;
+$mobileWidth: 480px;
+$tabletsWidth: 1024px;
+$lowResWidth: 768px;
+$mediumWidth: 1255px;
 
 @mixin mobile {
-    @media (max-width: #{$mobileWidth}){
+    @media (max-width: #{$lowResWidth}){
         @content
     }
-}
+};
+
+@mixin tablets {
+    @media (min-width: #{$mobileWidth}) and (max-width: #{$tabletsWidth}) {
+      @content;
+    }
+};
+
+@mixin windowed {
+    @media (min-width: #{$lowResWidth}) and (max-width: #{$mediumWidth}) {
+      @content;
+    }
+};

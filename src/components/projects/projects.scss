@@ -10,10 +10,15 @@
         font-size: $superBigFont;
         color: $primaryColor;
         margin: 40px;
+        overflow: hidden;
 
         @include mobile{
             font-size: 20px;
             margin: 20px;
+        }
+
+        @include tablets{
+            font-size: $bigFont;
         }
     }
 
@@ -23,10 +28,18 @@
         height: 70vh;
         justify-content: space-between;
         align-items: center;
+        font-size: 50;
 
-        @include mobile{
+        @include mobile {
             flex-direction: column;
             height: 100%;
         }
+
+        @include windowed {
+            width: 90vw;
+            height: 70vh;
+            justify-content: space-between;
+        }
+
     }
 }
