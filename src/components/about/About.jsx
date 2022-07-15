@@ -76,17 +76,6 @@ function About() {
         },
     ];
 
-    // const Intro = () => {
-    //     return (
-    //         <div className="intro">
-    //             <p>
-    //             Hello, my name is <span>Muhammad Raihan Asyraf Desanto</span>. I'm a final year student majoring Informatics Engineering student at Bandung Institute of Technology.
-    //             I'm passionate about Web Developments, especially coding and experimenting UI design. I'm also interested in machine learning and eager to learn more about natural language processing.
-    //             </p>
-    //         </div>
-    //     )
-    // }
-
     const PointDesc = ({ data }) => {
         return (
             <div className="pointdesc-container">
@@ -112,20 +101,10 @@ function About() {
                 <div className="right">
                     <div className="wrapper">
                         <div className="description">
-                            {/* {
-                                index === -1
-                                ? (<Intro />)
-                                : (<PointDesc data={data[index]}/>)
-                            } */}
                             <PointDesc data={data[index]}/>
                         </div>
                         <div className="sticky-menu">
                         <ul>
-                            {/* <li>
-                                <div className={"icon " + (index === -1 && "active")} onClick={() => setIndex(-1)}>
-                                    <CgProfile/>
-                                </div>
-                            </li> */}
                             <li>
                                 <div className={"icon " + (index === 0 && "active")} onClick={() => setIndex(0)}>
                                     <IoIosSchool/>
