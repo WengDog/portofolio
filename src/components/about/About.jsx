@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { IoIosHeart, IoIosSchool, IoIosPaper, IoMdTrophy } from "react-icons/io"
+import { GiGears } from "react-icons/gi"
+import { IoIosSchool, IoIosPaper, IoMdTrophy } from "react-icons/io"
 
 
 import "./about.scss"
@@ -57,15 +58,19 @@ function About() {
             ]
         },
         {
-            header: "Hobbies and Interest",
+            header: "Skills",
             items: [
                 {
-                    title: "Sports",
-                    desc: "I love football/futsal. I've been active in football since I was in elementary school and curently active in HMIF futsal club",
+                    title: "Language and Framework",
+                    desc: "Python, Java, HTML, CSS, Javascript, PHP, React Native, ReactJs, TypeScript, and Bootstrap",
                 },
                 {
-                    title: "Game",
-                    desc: "love playing a lot of computer or console games, curently playing Genshin Impact",
+                    title: "Tools",
+                    desc: "Git, VS Code, Android Studio",
+                },
+                {
+                    title: "Machine Learning",
+                    desc: "Tensorflow and Keras",
                 },
             ]
         },
@@ -138,7 +143,7 @@ function About() {
                             </li>
                             <li>
                                 <div className={"icon " + (index === 3 && "active")} onClick={() => setIndex(3)}>
-                                    <IoIosHeart/>
+                                    <GiGears/>
                                 </div>
                             </li>
                         </ul>
